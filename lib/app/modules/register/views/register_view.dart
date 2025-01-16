@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:lottie/lottie.dart';
-import 'package:myapp/app/modules/register/controllers/register_controller.dart';
+
+import '../controllers/register_controller.dart';
 
 class RegisterView extends GetView<RegisterController> {
   const RegisterView({super.key});
   @override
- Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     RegisterController controller = Get.put(RegisterController());
     return Scaffold(
       backgroundColor: HexColor('#feeee8'),

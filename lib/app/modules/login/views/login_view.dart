@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:lottie/lottie.dart';
 import 'package:myapp/app/modules/register/views/register_view.dart';
+
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
   const LoginView({super.key});
   @override
-  Widget build(BuildContext context) {
+ Widget build(BuildContext context) {
     LoginController controller = Get.put(LoginController());
     return Scaffold(
       backgroundColor: HexColor('#feeee8'),
@@ -101,4 +103,4 @@ class LoginView extends GetView<LoginController> {
       ),
     );
   }
-}
+ }

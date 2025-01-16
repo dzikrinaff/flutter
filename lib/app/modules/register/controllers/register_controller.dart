@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/connect.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:myapp/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:myapp/app/utils/api.dart';
+
 
 class RegisterController extends GetxController {
   final _getConnect = GetConnect();
@@ -23,6 +23,7 @@ class RegisterController extends GetxController {
 
     if (response.statusCode == 201) {
       authToken.write('token', response.body['token']);
+      Get.offAll(() => const DashboardView());
     } else {
       Get.snackbar(
         'Error',
@@ -59,4 +60,5 @@ class RegisterController extends GetxController {
     super.onClose();
   }
 }
+
 

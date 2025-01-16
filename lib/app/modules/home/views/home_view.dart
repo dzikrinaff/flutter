@@ -10,7 +10,8 @@ import '../controllers/home_controller.dart';
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
   @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
+  HomeController controller = Get.put(HomeController());
     return Scaffold(
       backgroundColor: HexColor('#feeee8'),
       body: Center(
