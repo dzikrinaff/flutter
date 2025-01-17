@@ -105,16 +105,16 @@ class YourEventView extends GetView {
                           );
                         },
                       ),
-                      // TextButton.icon(
-                      //   icon: const Icon(Icons.delete, color: Colors.red),
-                      //   label: const Text(
-                      //     'Delete',
-                      //     style: TextStyle(color: Colors.red),
-                      //   ),
-                      //   onPressed: () {
-                      //     controller.deleteEvent(id: event.id!);
-                      //   },
-                      // ),
+                      TextButton.icon(
+                        icon: const Icon(Icons.delete, color: Colors.red),
+                        label: const Text(
+                          'Delete',
+                          style: TextStyle(color: Colors.red),
+                        ),
+                        onPressed: () {
+                          controller.deleteEvent(id: event.id!);
+                        },
+                      ),
                     ],
                   ),
                   const SizedBox(height: 16),
